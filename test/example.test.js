@@ -1,18 +1,68 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+import { didUserWin } from '../util.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+test('if user and computer choose the same object, returns draw', (expect) => {
+    const userChoice = 'rock';
+    const compChoice = 'rock';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'draw', 'rock v. rock is a draw');
+});
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+test('if user and computer choose the same object, returns draw', (expect) => {
+    const userChoice = 'paper';
+    const compChoice = 'paper';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'draw', 'paper v. paper is a draw');
+});
+
+test('if user and computer choose the same object, returns draw', (expect) => {
+    const userChoice = 'scissor';
+    const compChoice = 'scissor';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'draw', 'scissor v. scissor is a draw');
+});
+
+test('if user chooses rock and computer chooses paper, returns lose', (expect) => {
+    const userChoice = 'rock';
+    const compChoice = 'paper';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'lose', 'rock v. paper is a lose');
+});
+
+test('if user chooses rock and computer chooses scissor, returns win', (expect) => {
+    const userChoice = 'rock';
+    const compChoice = 'scissor';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'win', 'rock v. scissor is a win');
+});
+
+test('if user chooses paper and computer chooses rock, returns win', (expect) => {
+    const userChoice = 'paper';
+    const compChoice = 'rock';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'win', 'paper v. rock is a win');
+});
+
+test('if user chooses paper and computer chooses scissor, returns lose', (expect) => {
+    const userChoice = 'paper';
+    const compChoice = 'scissor';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'lose', 'paper v. scissor is a lose');
+});
+
+test('if user chooses scissor and computer chooses rock, returns lose', (expect) => {
+    const userChoice = 'scissor';
+    const compChoice = 'rock';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'lose', 'scissor v. rock is a lose');
+});
+
+test('if user chooses scissor and computer chooses paper, returns win', (expect) => {
+    const userChoice = 'scissor';
+    const compChoice = 'paper';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'win', 'scissor v. paper is a win');
 });

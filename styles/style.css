@@ -47,10 +47,13 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    font-weight: bolder;
+    font-size: 50px;;
 }
 
 footer {
@@ -70,8 +73,8 @@ h2 {
     margin-right: 20px;
 }
 
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
+.main-title {
+    text-align: center;
 }
 
 header img {
@@ -110,4 +113,31 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  input:checked + img {
+      box-shadow: 2px 2px 10px 2px blue;
+  } 
+
+  .hidden {
+      display: none;
+  }
+
+  img {
+      height: 100px;
+      margin: 10px;
+  }
+
+  .main-section {
+      padding: 0px;
+  }
+
+  button {
+      margin: 10px;
+  }
+
+  .stats {
+      border: 1px solid black;
+      border-radius: 5%;
+      width:200px;
   }
