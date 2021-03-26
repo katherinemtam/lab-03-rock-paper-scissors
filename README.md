@@ -16,7 +16,7 @@ HTML
 5. Display of wins and losses and draws
 6. Display of result of each game (can be text and/or images), should indicate what the computer threw and what the result was (win, loss, draw)
 
-Initilize
+Initialize
 1. Wins
 2. Draws
 3. Total

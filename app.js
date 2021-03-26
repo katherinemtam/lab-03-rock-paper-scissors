@@ -10,12 +10,14 @@ const drawsEl = document.getElementById('drawsEl');
 const lossesEl = document.getElementById('lossesEl');
 const totalEl = document.getElementById('totalEl');
 const resetEl = document.getElementById('resetEl');
+const resetNumberEl = document.getElementById('resetNumberEl');
 
 // initialize state
 let wins = 0;
 let draws = 0;
 let losses = 0;
 let total = wins + draws + losses;
+let reset = 0;
 
 // set event listeners to update state and DOM
 playEl.addEventListener('click', () => {
@@ -51,5 +53,7 @@ resetEl.addEventListener('click', () => {
     draws = 0;
     losses = 0;
     total = 0;
+    reset++;
     compThrowEl.textContent = '';
+    resetNumberEl.textContent = `Number of Resets: ${reset}`;
 });
