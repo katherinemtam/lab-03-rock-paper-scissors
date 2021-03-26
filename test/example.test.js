@@ -19,8 +19,8 @@ test('if user and computer choose the same object, returns draw', (expect) => {
 });
 
 test('if user and computer choose the same object, returns draw', (expect) => {
-    const userChoice = 'scissor';
-    const compChoice = 'scissor';
+    const userChoice = 'scissors';
+    const compChoice = 'scissors';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'draw', 'scissor v. scissor is a draw');
 });
@@ -34,7 +34,7 @@ test('if user chooses rock and computer chooses paper, returns lose', (expect) =
 
 test('if user chooses rock and computer chooses scissor, returns win', (expect) => {
     const userChoice = 'rock';
-    const compChoice = 'scissor';
+    const compChoice = 'scissors';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'win', 'rock v. scissor is a win');
 });
@@ -48,20 +48,20 @@ test('if user chooses paper and computer chooses rock, returns win', (expect) =>
 
 test('if user chooses paper and computer chooses scissor, returns lose', (expect) => {
     const userChoice = 'paper';
-    const compChoice = 'scissor';
+    const compChoice = 'scissors';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'lose', 'paper v. scissor is a lose');
 });
 
 test('if user chooses scissor and computer chooses rock, returns lose', (expect) => {
-    const userChoice = 'scissor';
+    const userChoice = 'scissors';
     const compChoice = 'rock';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'lose', 'scissor v. rock is a lose');
 });
 
 test('if user chooses scissor and computer chooses paper, returns win', (expect) => {
-    const userChoice = 'scissor';
+    const userChoice = 'scissors';
     const compChoice = 'paper';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'win', 'scissor v. paper is a win');

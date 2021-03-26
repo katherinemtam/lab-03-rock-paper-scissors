@@ -9,6 +9,7 @@ const winsEl = document.getElementById('winsEl');
 const drawsEl = document.getElementById('drawsEl');
 const lossesEl = document.getElementById('lossesEl');
 const totalEl = document.getElementById('totalEl');
+const resetEl = document.getElementById('resetEl');
 
 // initialize state
 let wins = 0;
@@ -42,4 +43,13 @@ playEl.addEventListener('click', () => {
     drawsEl.textContent = `Draws: ${draws}`;
     lossesEl.textContent = `Losses: ${losses}`;
     totalEl.textContent = `Total: ${total}`;
+});
+
+resetEl.addEventListener('click', () => {
+    winDrawLose.textContent = "It's time to test your luck!";
+    wins = 0;
+    draws = 0;
+    losses = 0;
+    total = 0;
+    compThrowEl.textContent = '';
 });

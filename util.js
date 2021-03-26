@@ -4,21 +4,21 @@ export function getComputerThrow() {
         return 'rock';
     } else if (randomThrow > 0.66) {
         return 'paper';
-    } return 'scissor';
+    } return 'scissors';
 }
 
 export function didUserWin(player, computer) {
     if (player === 'rock' && computer === 'paper') {
         return 'lose';
-    } else if (player === 'paper' && computer === 'scissor') {
+    } else if (player === 'paper' && computer === 'scissors') {
         return 'lose';
-    } else if (player === 'scissor' && computer === 'rock') {
+    } else if (player === 'scissors' && computer === 'rock') {
         return 'lose';
-    } else if (player === 'rock' && computer === 'scissor') {
+    } else if (player === 'rock' && computer === 'scissors') {
         return 'win';
     } else if (player === 'paper' && computer === 'rock') {
         return 'win';
-    } else if (player === 'scissor' && computer === 'paper') {
+    } else if (player === 'scissors' && computer === 'paper') {
         return 'win';
     } else { return 'draw'; }
 }
