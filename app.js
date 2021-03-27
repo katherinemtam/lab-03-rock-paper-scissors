@@ -54,6 +54,10 @@ resetEl.addEventListener('click', () => {
     losses = 0;
     total = 0;
     reset++;
+    winsEl.textContent = 'Wins: 0';
+    drawsEl.textContent = 'Draws: 0';
+    lossesEl.textContent = 'Losses: 0';
+    totalEl.textContent = 'Total: 0';
     compThrowEl.textContent = '';
     resetNumberEl.textContent = `Number of Resets: ${reset}`;
 });

@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { didUserWin } from '../util.js';
+import { getComputerThrow } from '../util.js';
 
 const test = QUnit.test;
 
@@ -58,6 +59,13 @@ test('if user chooses scissor and computer chooses rock, returns lose', (expect)
     const compChoice = 'rock';
     const actual = didUserWin(userChoice, compChoice);
     expect.equal(actual, 'lose', 'scissor v. rock is a lose');
+});
+
+test('if user chooses scissor and computer chooses paper, returns win', (expect) => {
+    const userChoice = 'scissors';
+    const compChoice = 'paper';
+    const actual = didUserWin(userChoice, compChoice);
+    expect.equal(actual, 'win', 'scissor v. paper is a win');
 });
 
 test('if user chooses scissor and computer chooses paper, returns win', (expect) => {
