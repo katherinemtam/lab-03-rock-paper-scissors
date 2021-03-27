@@ -1,7 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { didUserWin } from '../util.js';
-import { getComputerThrow } from '../util.js';
 
 const test = QUnit.test;
 
